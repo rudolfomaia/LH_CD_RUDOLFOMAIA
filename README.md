@@ -16,6 +16,7 @@ que mais fazem sentido para o problema.
 
 1. [configuração](#configuracao)
 2. [Aquisição de Dados](##aquisicao-de-dado)
+3. [Limpeza para Análise]("#limpeza-para-analise")
 
 ## 1. Configuração
 <a id="#configuracao"></a>
@@ -81,3 +82,46 @@ Exemplo: pip install pandas
     <li>Licença: A licença para este conjunto de dados não é especificada</li>
 </ul>
 </p>
+
+## Limpeza para Análise
+<a id="#limpeza-para-analise"></a>
+
+<p>
+Análise das tabelas de dados, identificação de células vazias, colunas irrelevantes para o projeto, etc. <br>
+</p>
+
+<b>Tratamento da base Dataset:</b>
+
+Algumas colunas são irrelevantes ao preço do aluguel, pois existem apenas para um controle interno do servidor de dados. 
+
+<ul>
+    <li>Exclusão das colunas: id, host_id, host_name, ultima_review.</li>
+    <li>Exclusão de linhas: Remover as linhas vazias.</li>
+</ul>
+
+<b>Observações</b>
+<ul>
+    <li>A coluna "nome" será mantida a pedido do cliente que deseja saber: "Existe algum padrão no texto do nome do local para lugares de mais alto valor?"</li>
+    <li>As colunas: disponibilidade_365, calculado_host_listings_count, numero_de_reviews, serão mantidas por serem do tipo Inteiros e não terem linhas vazias, podem auxiliar na fase de aprendizagem e DEA, e poderão nos mostrar algo nos graficos.</li>
+    <li>A coluna "reviews_por_mes" foi realizada uma analise separada, pois tem 1052 linhas vazias, que após uma analize das 50 primeiras linhas vazias, mostrou que excluir essas linhas para manter essa coluna é inviavél. Para manter essa coluna temos que utilizar de imputação de valores: Com Mediana(0.72) ou Clusters com KNN, porém após avaliar os outliers, teria que ser aplicado limittação(capping) ou transformação para tratamento. Em resumo 1/4 dos dados dessa coluna perderia a confiabilidade, ela não é uma coluna que valha tamanho risco na credibilidade futura, decisão final exclusão da coluna.</li>
+    <li> Após utilizar a coluna prices em alguns graficos, identificado Outliers, devido a inscosistencia nas analises futuras e a quantidade ser abaixo de 10%, optei por remover as linhas e não transformalas.
+</ul>
+
+<b>Tratamento da base escolas de NY e centros computacionais:</b>
+
+A base com a localização das escolas servirá de análise para identificar se tem ou não relevância escolas pertos do imóvel no preço do aluguel.
+
+<ul>
+    <li>Exclusão de colunas: remoção de todas as colunas exceto: Longitude, Latitude.</li>
+    <li>Exclusão de linhas: Remover as linhas que não tem a localização.</li>
+</ul>
+
+
+<b>Tratamento da base resumo de venda de imóveis por bairro:</b>
+
+A base com o resmudo de venda de imóveis por bairro, será utilizado para analisar e cruzar a informação do valor de venda em média e o valor médio de aluguel daquela bairro.
+
+<ul>
+    <li>Exclusão de colunas: remoção de todas as colunas exceto: BOROUGH, NEIGHBORHOOD, TYPE OF HOME, AVERAGE SALE PRICE, YEAR.</li>
+    <li>Exclusão de linhas: Mantive apenas as linhas do ano de 2022.
+</ul>
