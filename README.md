@@ -132,7 +132,53 @@ A base com o resmudo de venda de imóveis por bairro, será utilizado para anali
 <a id="analise-exploratoria-de-dados-eda"></a>
 
 <p>
-Para a análise exploratoria de dados(EDA), pularemos a visualização inicial dos dados, bem como suas estatísticas e limpeza, pois foram realizados em passos anteriores. Iremos direto para as análises com auxílio de gráficos e plots.<br>
+Para a análise exploratoria de dados(EDA), realizei uma análise detalhada das variáveis do dataset para entender melhor a distribuição, correlação e possíveis impactos no preço de aluguéis. A seguir estão as principais etapas durante a análise.
+
+**Análise Univariada**
+
+Para iniciar, fiz uma análise univariada da variável price para entender sua distribuição. Utilizei histogramas e gráficos de densidade para visualizar a distribuição dos preços.
+
+**Análise Bivariada**
+
+Explorei as relações entre preço e outras variáveis categóricas e numéricas. Algumas análises incluíram:
+
+- **Distribuição das variáveis categóricas**: 
+    - Plotei histogramas para variáveis como room_type, bairro_group e bairro.
+- **Relação entre latitude e longitude com o preço**:
+    - Utilizei scatter plots coloridos por preço para visualizar a distribuição geográfica dos aluguéis.
+- **Boxplots**:
+    - Analisei a relação de preço com `room_type`, `bairro_group` e `bairro`.
+- **Correlação de Pearson**:
+    - Calculei e plotei a correlação de Pearson entre distancia_escola_mais_proxima e preci, além de outras variáveis numéricas.
+
+**Análise Multivariada**
+
+Realizei análises multivariadas para entender as interações entre múltiplas variáveis. Utilizei gráficos de pares e matrizes de correlação para identificar possíveis relações:
+
+- **Pairplots**:
+    - Visualizei a interação entre diversas variáveis numéricas.
+- **Heatmaps de correlação**:
+    - Gerei mapas de calor para analisar a correlação entre as variáveis numéricas.
+
+**Análise de Correlação**
+
+Utilizei uma matriz de correlação para calcular as correlações de Pearson entre variáveis importantes, permitindo identificar relações significativas que possam impactar o preço dos aluguéis.
+
+**Normalização de Dados**
+
+Para garantir a consistência das análises, realizei a normalização dos dados:
+
+- **StandardScaler**: Utilizado para colunas com distribuições próximas do normal, como numero_de_reviews, disponibilidade_365 e calculado_host_listings_count.
+- **MinMaxScaler**: Aplicado para colunas com distribuições enviesadas ou valores extremos, como minimo_noites, distancia_escola_mais_proxima e distancia_pcc_mais_proximo.
+
+**Análise da Variável Nome**
+
+Atendendo a uma solicitação específica, analisei detalhadamente a variável nome para localizar padrões:
+
+- **Contagem de palavras**:
+    - Excluí palavras irrelevantes e analisei a frequência das palavras mais comuns nos nomes das propriedades.
+- **Comprimento do Nome**:
+    - Analisei a relação entre o comprimento dos nomes e o preço dos aluguéis.
 </p>
 
 ## 5. Pré-processamento e treinamento de ML
