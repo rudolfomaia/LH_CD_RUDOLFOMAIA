@@ -15,14 +15,10 @@ que mais fazem sentido para o problema.
 ## Índice
 
 1. [configuração](#configuracao)
-2. [Limpeza para Análise](#limpeza-para-analise)
-3. [Análise Exploratória de Dados (EDA)](#analise-exploratoria-de-dados-eda)
-4. [Pré-processamento e treinamento de ML](#pre-processamento-treinamento)
-
-
+2. [Aquisição de Dados](##aquisicao-de-dado)
 
 ## Configuração
-
+<a id="#configuracao"></a>
 
 Bibliotecas Utilizadas
 
@@ -55,3 +51,33 @@ Para este projeto, utilizaremos as seguintes bibliotecas:
 Caso não possua alguma das bibliotecas instalada em sua maquina, basta abrir um novo terminal e executar a instalação através do comando "pip install nome-biblioteca".
 Exemplo: pip install pandas
 
+## Aquisição de Dados
+<a id="#aquisicao-de-dados"></a>
+
+<p>
+<b>Dados do suposto concorrente do cliente final, fornecidos pela Indicium (dataset).</b> <br>
+<ul>
+    <li>Fonte de dados: <a href="https://drive.google.com/drive/folders/1osZizjZ-hd0SMD5J6-vUZvB8bMJI3zVV" target="_blank">https://drive.google.com/drive/folders/1osZizjZ-hd0SMD5J6-vUZvB8bMJI3zVV</a></li>
+    <li>tipo de dados: csv</li>
+    <li>Licença: A licença para este conjunto de dados não é especificada</li>
+</ul>
+<b>Localização das escolas públicas de NY.</b> <br>
+<ul>
+    <li>Fonte de dados: <a href="https://data.cityofnewyork.us/Education/NYC-DOE-Public-School-Location-Information/3bkj-34v2/about_data" target="_blank">https://data.cityofnewyork.us/Education/NYC-DOE-Public-School-Location-Information/3bkj-34v2/about_data</a></li>
+    <li>tipo de dados: csv</li>
+    <li>Licença: A licença para este conjunto de dados não é especificada</li>
+</ul>
+<b>Localização centros públicos computacionais.</b><br>
+(centros públicos com computador e internet) <br>
+<ul>
+    <li>Fonte de dados: <a href="https://data.cityofnewyork.us/Social-Services/Citywide-Public-Computer-Centers/sejx-2gn3/about_data" target="_blank">https://data.cityofnewyork.us/Social-Services/Citywide-Public-Computer-Centers/sejx-2gn3/about_data</a></li>
+    <li>tipo de dados: csv</li>
+    <li>Licença: A licença para este conjunto de dados não é especificada</li>
+</ul>
+<b>Resumo de venda de imóveis por bairro</b><br>
+<ul>
+    <li>Fonte de dados: <a href="https://data.cityofnewyork.us/City-Government/DOF-Summary-of-Neighborhood-Sales-by-Neighborhood-/5ebm-myj7/about_data" target="_blank">https://data.cityofnewyork.us/City-Government/DOF-Summary-of-Neighborhood-Sales-by-Neighborhood-/5ebm-myj7/about_data</a></li>
+    <li>tipo de dados: csv</li>
+    <li>Licença: A licença para este conjunto de dados não é especificada</li>
+</ul>
+</p>
