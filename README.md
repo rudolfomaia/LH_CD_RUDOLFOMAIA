@@ -127,6 +127,7 @@ A base com o resmudo de venda de imóveis por bairro, será utilizado para anali
     <li>Exclusão de colunas: remoção de todas as colunas exceto: BOROUGH, NEIGHBORHOOD, TYPE OF HOME, AVERAGE SALE PRICE, YEAR.</li>
     <li>Exclusão de linhas: Mantive apenas as linhas do ano de 2022.
 </ul>
+
 ## 4. Análise Exploratória de Dados (EDA)
 <a id="analise-exploratoria-de-dados-eda"></a>
 
