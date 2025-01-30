@@ -127,13 +127,16 @@ A base com o resmudo de venda de imóveis por bairro, será utilizado para anali
     <li>Exclusão de colunas: remoção de todas as colunas exceto: BOROUGH, NEIGHBORHOOD, TYPE OF HOME, AVERAGE SALE PRICE, YEAR.</li>
     <li>Exclusão de linhas: Mantive apenas as linhas do ano de 2022.
 </ul>
-## Análise Exploratória de Dados (EDA)
+## 4. Análise Exploratória de Dados (EDA)
 <a id="analise-exploratoria-de-dados-eda"></a>
+
 <p>
 Para a análise exploratoria de dados(EDA), pularemos a visualização inicial dos dados, bem como suas estatísticas e limpeza, pois foram realizados em passos anteriores. Iremos direto para as análises com auxílio de gráficos e plots.<br>
 </p>
-## Pré-processamento e treinamento de ML
+
+## 5. Pré-processamento e treinamento de ML
 <a id="pre-processamento-treinamento"></a>
+
 <p>
 Regressão linear, implantação de cluster e treinamento de ML<br>
 </p>
