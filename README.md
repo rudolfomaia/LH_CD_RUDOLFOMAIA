@@ -147,7 +147,7 @@ Explorei as relações entre preço e outras variáveis categóricas e numérica
 - **Relação entre latitude e longitude com o preço**:
     - Utilizei scatter plots coloridos por preço para visualizar a distribuição geográfica dos aluguéis.
 - **Boxplots**:
-    - Analisei a relação de preço com `room_type`, `bairro_group` e `bairro`.
+    - Analisei a relação de preço com room_type, bairro_group e bairro.
 - **Correlação de Pearson**:
     - Calculei e plotei a correlação de Pearson entre distancia_escola_mais_proxima e preci, além de outras variáveis numéricas.
 
