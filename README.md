@@ -17,7 +17,7 @@ que mais fazem sentido para o problema.
 1. [configuração](#configuracao)
 2. [Aquisição de Dados](##aquisicao-de-dado)
 
-## 1.Configuração
+## 1. Configuração
 <a id="#configuracao"></a>
 
 Bibliotecas Utilizadas
@@ -51,7 +51,7 @@ Para este projeto, utilizaremos as seguintes bibliotecas:
 Caso não possua alguma das bibliotecas instalada em sua maquina, basta abrir um novo terminal e executar a instalação através do comando "pip install nome-biblioteca".
 Exemplo: pip install pandas
 
-## 2.Aquisição de Dados
+## 2. Aquisição de Dados
 <a id="#aquisicao-de-dados"></a>
 
 <p>
