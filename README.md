@@ -83,7 +83,7 @@ Exemplo: pip install pandas
 </ul>
 </p>
 
-## Limpeza para Análise
+## 3. Limpeza para Análise
 <a id="#limpeza-para-analise"></a>
 
 <p>
