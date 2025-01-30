@@ -12,6 +12,15 @@ dos dados de seu maior concorrente, assim como um teste de validação de um mod
 Seu objetivo é desenvolver um modelo de previsão de preços a partir do dataset oferecido, e avaliar tal modelo utilizando as métricas de avaliação
 que mais fazem sentido para o problema.
 
+## Índice
+
+1. [configuração](#configuracao)
+2. [Limpeza para Análise](#limpeza-para-analise)
+3. [Análise Exploratória de Dados (EDA)](#analise-exploratoria-de-dados-eda)
+4. [Pré-processamento e treinamento de ML](#pre-processamento-treinamento)
+
+
+
 ## Configuração
 
 
