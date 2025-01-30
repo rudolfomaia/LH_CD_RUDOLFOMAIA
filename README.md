@@ -240,8 +240,8 @@ Para facilitar o uso do modelo otimizado e assegurar a reprodução dos resultad
 2. **Normalizador (normalizador.pkl)**: Utilizado para normalizar os dados numéricos de entrada.
 3. **Codificador (codificador.pkl)**: Responsável por codificar as variáveis categóricas.
 
-**Como Utilizar o Modelo**
-**Carregar os Arquivos PKL no inicio do cod de consulta**:
+
+**Para usar os arquivos PKL, basta carregá-los no início do código de consulta, conforme exemplo abaixo:**:
    
    with open('modelo_otimizado.pkl', 'rb') as arquivo_modelo:<br>
        modelo_otimizado = pickle.load(arquivo_modelo) <br>
