@@ -243,10 +243,10 @@ Para facilitar o uso do modelo otimizado e assegurar a reprodução dos resultad
 **Como Utilizar o Modelo**
 **Carregar os Arquivos PKL no inicio do cod de consulta**:
    
-   with open('modelo_otimizado.pkl', 'rb') as arquivo_modelo:
-       modelo_otimizado = pickle.load(arquivo_modelo)
-   with open('normalizador.pkl', 'rb') as arquivo_normalizador:
-       normalizador = pickle.load(arquivo_normalizador)
-   with open('codificador.pkl', 'rb') as arquivo_codificador:
+   with open('modelo_otimizado.pkl', 'rb') as arquivo_modelo:<br>
+       modelo_otimizado = pickle.load(arquivo_modelo) <br>
+   with open('normalizador.pkl', 'rb') as arquivo_normalizador:<br>
+       normalizador = pickle.load(arquivo_normalizador)<br>
+   with open('codificador.pkl', 'rb') as arquivo_codificador:<br>
        codificador = pickle.load(arquivo_codificador)
 </p>
