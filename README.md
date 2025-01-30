@@ -185,5 +185,68 @@ Atendendo a uma solicitação específica, analisei detalhadamente a variável n
 <a id="pre-processamento-treinamento"></a>
 
 <p>
-Regressão linear, implantação de cluster e treinamento de ML<br>
+Apresento as técnicas de modelagem e validação utilizadas para prever o preço dos aluguéis com base nas variáveis do dataset. As seguintes etapas foram realizadas:
+
+**Regressão Linear Múltipla**
+
+Realizei a modelagem usando Regressão Linear Múltipla para quantificar a relação entre o preço e as variáveis independentes.
+
+- **Variáveis Independentes**: numero_de_reviews, disponibilidade_365, calculado_host_listings_count, minimo_noites, distancia_escola_mais_proxima, distancia_pcc_mais_proximo;
+- **Variável Dependente**: price;
+- **Resultados**: 
+  - **R²**: 3.9%
+  - **Erro Médio Absoluto**: N/A (não calculado)
+
+K-Means Clustering
+Apliquei K-Means para agrupar imóveis com base em características semelhantes.
+- **Número de Clusters**: 3 (determinado pelo método do cotovelo)
+- **Visualização**: Clusters plotados usando PCA para redução de dimensionalidade
+
+**Nota** Preferi remover a distância dos centros e escolas, pois não impactava no preço e para agilizar o processamento dos modelos.
+
+**Random Forest Regressor**
+Utilizei o modelo Random Forest Regressor para capturar interações não lineares.
+- **Erro Médio Absoluto**: 32.1665
+- **R²**: 55.89%
+
+**Validação Cruzada com Random Forest**
+Adicionei validação cruzada ao modelo Random Forest para evitar overfitting.
+- **Erro Médio Absoluto (Validação Cruzada)**: 33.5805
+- **R² (Validação Cruzada)**: 53.28%
+
+**Gradient Boosting Regressor (XGBoost)**
+Testei o modelo Gradient Boosting Regressor para capturar relações mais complexas.
+- **Erro Médio Absoluto**: 31.8374
+- **R²**: 57.05%
+- **Erro Médio Absoluto (Validação Cruzada)**: 33.1092
+- **R² (Validação Cruzada)**: 54.75%
+
+**Light Gradient Boosting Machine (LightGBM)**
+Experimentei o modelo LightGBM, que apresentou os melhores resultados.
+- **Erro Médio Absoluto**: 31.8446
+- **R²**: 57.12%
+- **Erro Médio Absoluto (Validação Cruzada)**: 32.9140
+- **R² (Validação Cruzada)**: 55.29%
+
+**LightGBM com RandomizedSearchCV**
+Realizei a otimização dos hiperparâmetros usando RandomizedSearchCV devido à complexidade computacional.
+- Melhores Parâmetros: {'num_leaves': 50, 'n_estimators': 500, 'min_child_samples': 40, 'max_depth': 30, 'learning_rate': 0.05}
+- **Erro Médio Absoluto**: 31.4509
+- **R²**: 57.71%
+
+**Uso dos Arquivos PKL**
+Para facilitar o uso do modelo otimizado e assegurar a reprodução dos resultados, três arquivos .pkl foram gerados:
+1. **Modelo Otimizado (modelo_otimizado.pkl)**: Contém o modelo treinado com os melhores parâmetros.
+2. **Normalizador (normalizador.pkl)**: Utilizado para normalizar os dados numéricos de entrada.
+3. **Codificador (codificador.pkl)**: Responsável por codificar as variáveis categóricas.
+
+**Como Utilizar o Modelo**
+**Carregar os Arquivos PKL no inicio do cod de consulta**:
+   
+   with open('modelo_otimizado.pkl', 'rb') as arquivo_modelo:
+       modelo_otimizado = pickle.load(arquivo_modelo)
+   with open('normalizador.pkl', 'rb') as arquivo_normalizador:
+       normalizador = pickle.load(arquivo_normalizador)
+   with open('codificador.pkl', 'rb') as arquivo_codificador:
+       codificador = pickle.load(arquivo_codificador)
 </p>
